@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/patientRegisterStyle.css">
+    <title>Update Profile</title>
+</head>
+
+<body>
+    <div class="container">
+        <button
+            style="margin:5px;padding: 5px;font-size: 14px;background-color: #009879;color:white;border: none;border-radius: 5px;cursor: pointer;"
+            onclick="window.open('/my-profile.html','_self')">
+            ⬅ Go To Profile Page
+        </button>
+        <form class="form" id="editProfile-form">
+
+            <div class="head">
+                <h1>Edit Profile</h1>
+            </div>
+            <div class="container-info">
+                <div class="info">
+                    <div class="form-control">
+
+                        <input type="text" id="username" required>
+                        <label for="username">User Name</label>
+                        <span></span>
+                    </div>
+                    <div class="form-control">
+
+                        <select id="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                        <span></span>
+
+
+
+                    </div>
+                    <div class="form-control">
+
+                        <input id="date" required>
+                        <label for="date"></label>
+                        <span></span>
+                    </div>
+                    <div class="form-control">
+
+                        <input type="text" id="address" required>
+                        <label for="address">Address</label>
+                        <span></span>
+                    </div>
+
+
+                </div>
+                <div class="info">
+
+                    <div class="form-control">
+
+                        <input type="number" id="number" required>
+                        <label for="number">Phone Number</label>
+                        <span></span>
+                    </div>
+                    <div class="form-control ">
+
+                        <input type="email" id="email">
+                        <label for="email">Email</label>
+                        <span></span>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="password" id="password" required>
+                        <label for="password">Password</label>
+                        <span></span>
+                    </div>
+                    <div class="form-control">
+                        <input type="password" id="confirm-passwrd" required>
+                        <label for="confirm-passwrd">Confirm Password</label>
+                        <span></span>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+            <!--Uploud your image-->
+            <!-- <div class="image-container">
+                <div>
+                    <p>Upload your image <label for="img">
+                            <img src="./images/icons8-addImage.png" height="25px" width="25px" class="icon">
+                        </label></p>
+                </div>
+                <div class="uploadImg">
+
+                    <input type="file" name="img" id="img" accept=".png, .jpg, .jpeg" hidden>
+                    <img id="preview" />
+                    <span class="close-btn" id="closeBTN">
+                        <i class="fas fa-times"></i></span>
+
+                </div>
+            </div> -->
+
+
+            <div class="btn">
+                <button type="submit" id="button">Update Informations</button>
+            </div>
+        </form>
+
+    </div>
+    <script src="./scripts/editProfileScripts.js" type="module">
+
+    </script>
+
+</body>
+
+</html>

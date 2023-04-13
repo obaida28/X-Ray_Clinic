@@ -1,0 +1,74 @@
+<ul class="navbar-nav me-auto">
+
+
+        <li class="nav-item not-authed">
+            <a class="nav-link active" href="./expert-login.html"> Login
+            </a>
+        </li>
+
+        <li class="nav-item doc-auth">
+            <a class="nav-link active" href="./expert-signup.html"> Create Employee Acount
+            </a>
+        </li>
+
+        <li class="nav-item authed">
+            <a class="nav-link active" href="./expert-profile.html">Profile
+            </a>
+        </li>
+
+        <li class="nav-item authed">
+            <a class="nav-link active doc-auth" href="./clinic-profile.html">Clinic Profile
+            </a>
+        </li>
+
+        <li class="nav-item authed">
+            <a class="nav-link active" style="font-weight: bolder;"
+                href="./appointments-current-hour.html">Active Appointements
+            </a>
+        </li>
+
+
+        <li class="nav-item authed doc-auth">
+            <a class="nav-link active" href="./manage-emps.html">Manage Emps
+            </a>
+        </li>
+        <li class="nav-item authed doc-auth">
+            <a class="nav-link active" href="./manage-patients.html">Manage Patients
+            </a>
+        </li>
+        <li class="nav-item authed doc-auth">
+            <a class="nav-link active" href="./manageSessions.html">Manage Sessions
+            </a>
+        </li>
+        <li class="nav-item authed">
+            <a class="nav-link active" href="./patients.html">Patients
+            </a>
+        </li>
+        <li class="nav-item authed">
+            <a class="nav-link active" href="./create-patient-account.html" target="_blank">Create Patient
+                Account
+            </a>
+        </li>
+        <li class="nav-item active-ses">
+            <a class="nav-link active" href="./current-session.html">
+                Current Session
+            </a>
+        </li>
+
+        <li class="nav-item authed">
+            <a class="nav-link active" href="#" id='logout'>
+                Logout
+            </a>
+        </li>
+
+    </ul>
+    <script>
+        if (!localStorage.getItem('se')) {
+            document.querySelector('.active-ses').style.display = 'none'
+        }
+        document.getElementById('logout').onclick = () => {
+            document.cookie = "admin=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "doc=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            window.open('/admin/expert-login.html', '_self')
+        }
+    </script>

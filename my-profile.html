@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient's Profile</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://bootswatch.com/5/yeti/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/myProfileStyle.css">
+</head>
+
+<body>
+
+
+  <div class="container">
+    <button class="btn btn-success m-3" style="background-color:#009879" onclick="window.open('/index.html','_self')">
+      ⬅ Go To Homepage
+    </button>
+
+    <div class="page">
+      <!--personal info-->
+
+      <div class="personal-info">
+        <h1>Personal Info</h1>
+        <div class="info">
+          <div class="list">
+            <ul>
+              <li>Name: <span id="name" style="font-weight:bold ;"></span></li>
+              <li>Email: <span id="email" style="font-weight:bold ;"></span></li>
+              <li>Age: <span id="age" style="font-weight:bold ;"> </span></li>
+              <li>Gender: <span id="gender" style="font-weight:bold ;"></span></li>
+              <li>Address: <span id="address" style="font-weight:bold ;"></span></li>
+
+
+
+            </ul>
+
+          </div>
+          <div class="logo">
+            <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="user" id='pic' />
+
+            <button id='editBtn' class="btn btn-success m-3" style="background-color:#009879">
+              🖊 Edit Profile
+            </button>
+          </div>
+
+
+        </div>
+
+
+
+      </div>
+      <!--medical history-->
+
+      <div class="medical-history">
+        <h1>Sessions History</h1>
+        <table class="content-table">
+          <thead>
+            <tr class="t-row">
+              <th> </th>
+              <th> </th>
+            </tr>
+          </thead>
+          <tbody id='tbody2'>
+
+          </tbody>
+        </table>
+
+
+        <!--Appointment-->
+        <div class="medical-history">
+          <h1>Appointments</h1>
+          <table class="content-table">
+            <thead>
+              <tr class="t-row">
+                <th style="display:none;"> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+
+              </tr>
+            </thead>
+            <tbody id="tbody">
+
+
+            </tbody>
+          </table>
+          <!--make an appointment-->
+          <!-- <div class="appointment">
+            <button id="btn1">
+              Make an appointment
+            </button>
+
+          </div> -->
+
+        </div>
+
+
+      </div>
+      <!--Model-->
+
+      <div class="modal-container" id="modal">
+        <div class="modal-1">
+
+          <div class="modal-header">
+            <h3>Report</h3>
+            <button class="close-btn" id="closeBTN">
+              <!-- <i class="fa fa-times"></i> -->
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50"
+                style=" fill:#fff; ">
+                <path
+                  d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z">
+                </path>
+              </svg>
+            </button>
+
+          </div>
+          <div class="modal-content">
+            <img src="./images/x-ray1.jpg" height="100%" width="100%">
+            <p>
+              Lorem ipsum dolor, sit amet adipisicing elit. Voluptate voluptates fugiat deleniti quibusdam et molestiae
+              distinctio omnis labore eligendi! Ipsam similique animi beatae facilis quos blanditiis! Repellendus fugit
+              rerum aliquid!
+            </p>
+
+          </div>
+
+
+        </div>
+      </div>
+
+      <!--update model-->
+      <div class="update-appointment none" id="forms">
+        <div class="modal-2" id="modal-2">
+
+          <div class="modal2-header">
+            <h3>Update your appointment</h3>
+            <button class="close2-btn" id="close2BTN">
+
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50"
+                style=" fill:#fff; ">
+                <path
+                  d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z">
+                </path>
+              </svg>
+            </button>
+          </div>
+          <div class="form-container">
+            <form class="form" id="form">
+
+              <div class="form-control" style="display: none;">
+                <label for="id"> ID</label>
+                <input type="number" id="id">
+
+                <span></span>
+              </div>
+
+              <div class="form-control">
+                <label for="date"> Date</label>
+                <input type="text" id="date">
+
+                <span></span>
+              </div>
+              <div class="form-control">
+                <label for="time">Hour</label>
+                <select id="time">
+                  <option>Select Date First</option>
+                </select>
+
+                <span></span>
+              </div>
+              <div class="form-control">
+                <label for="note">Explain your reason</label>
+                <input type="text" id="note">
+
+                <span></span>
+              </div>
+              <!-- <div class="form-control">
+                <label for="docName"> Doctor Name</label>
+                <input type="text" id="docName">
+
+                <span></span>
+              </div>
+              <div class="form-control">
+                <label for="docNum"> Doctor Number</label>
+                <input type="number" id="docNum">
+
+                <span></span>
+              </div> -->
+              <!-- <div class="form-control">
+                <label for="phoneNum"> Phone Number</label>
+                <input type="number" id="phoneNum">
+
+                <span></span>
+              </div> -->
+
+            </form>
+          </div>
+
+          <div class="updateBtn"><button id="updateBtn"> Update</button>
+          </div>
+
+
+        </div>
+
+      </div>
+
+      <div class="update-appointment none" id="formsShow">
+        <div class="modal-2" id="modal-21">
+
+          <div class="modal2-header">
+            <h3>Session Details</h3>
+            <button class="close2-btn" id="close2BTNShow">
+
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50"
+                style=" fill:#fff; ">
+                <path
+                  d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z">
+                </path>
+              </svg>
+            </button>
+          </div>
+          <div class="form-container">
+            <table>
+              <tr>
+                  <td colspan="2">
+                      <center><img id="xray" height="300px"/></center>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      <h4 id="lbl1"></h4>
+                  </td>
+                  <td>
+                      <label id="l1">تشخيص الصورة</label>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      <h4 id="lbl2"></h4>
+                  </td>
+                  <td>
+                      <label id="l2">تشخيص الموظف</label>
+                  </td>
+              </tr> 
+              <tr>
+                <td>
+                  <h2 id="lbl3"></h4>
+                </td>
+                <td>
+                  <label id="l3">تقرير الطبيب</label>
+                </td>
+              </tr> 
+          </table> 
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+
+      <script src="./scripts/myProfileScript.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;1,300&family=Lato:ital,wght@0,100;1,100&family=Roboto:ital,wght@0,100;0,300;1,100&family=Work+Sans:ital,wght@0,100;1,200;1,300&display=swap');
+* {
+	box-sizing: border-box;
+
+}
+body{
+   
+    
+
+    background: url(../images/13.jpg) no-repeat;
+    background-size: cover;
+   height: 100vh;
+    
+    font-family: 'roboto' ,sans-serif;
+    margin: 0;
+}
+.container{
+    background-color: #f2f4f6;
+    box-shadow: 0.6em 0.6em 1.2em grey;
+    border-radius: 10px;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+}
+
+.container form {
+    
+   padding: 0 40px;
+  
+}
+
+.head{
+     width: 100%;
+     padding-left: 2rem ;
+    
+   
+    height: 4.5rem;
+    position: relative;
+    
+   
+}
+h1{
+   
+    color: white;
+    font-size: 30px;
+    padding-top: 1rem;
+}
+.head::before{
+    content: '';
+    background: #009879;
+   
+    position: absolute;
+    left: -5rem;
+    width: calc(100% + 5rem);
+    right: 25px;
+    height: 100%;
+    z-index: -4;
+   border-radius: 3px;
+   box-shadow: inset -12px 0 10px -10px rgba(0,0,0,.5);
+
+}
+.head::after{
+   content: ''; 
+   background: #009879;
+   position: absolute;
+   color: white;
+ 
+  
+  width: 3rem;
+ height: 100%;
+  
+  top: 0;
+  border-radius: 3px;
+
+  right: 0;
+ left: calc(100% + 2.5rem);
+ box-shadow: inset 12px 0 10px -10px rgba(0,0,0,.5);
+
+ 
+  
+}
+.form-control {
+   
+    margin: 25px 0;
+    position: relative;
+}
+.form-control input {
+    width: 100%;
+    height: 40px;
+    background-color: none;
+    border: none;
+    outline: none;
+   
+
+}
+.form-control label {
+    position: absolute;
+    color: silver;
+    top: 50%; left: 5px;
+    transform: translateY(-50%);
+    
+    padding: 10px;
+    
+}
+.form-control span::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    background: #009879;
+    top: 40px;
+    height: 2px;
+    width: 100%;
+}
+.form-control input:focus ~ label,
+.form-control input:valid ~ label
+
+ {
+   
+    color: #009879;
+    top: -10px;
+    transition: 0.5s;
+}
+
+.btn{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+    
+}
+#button{
+    height: 50px;
+    width: 200px;
+    border-radius:10px ;
+    background-color: #009879;
+    color: white;
+    font-size: 18px;
+    
+}
+.signup{
+    color: silver;
+    margin-bottom: 15px;
+    
+}
+.signup span a{
+    text-decoration: none;
+    color: #009879;
+    font-weight: bold;
+}
+.signup span a:hover{
+    text-decoration: underline;
+}

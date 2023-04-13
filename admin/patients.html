@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/bootstrap.css">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">X-Ray Clinic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+
+
+                    <li class="nav-item not-authed">
+                        <a class="nav-link active" href="./expert-login.html"> Login
+                        </a>
+                    </li>
+
+                    <li class="nav-item doc-auth">
+                        <a class="nav-link active" href="./expert-signup.html"> Create Employee Acount
+                        </a>
+                    </li>
+
+                    <li class="nav-item authed">
+                        <a class="nav-link active" href="./expert-profile.html">Profile
+                        </a>
+                    </li>
+
+                    <li class="nav-item authed">
+                        <a class="nav-link active doc-auth" href="./clinic-rofile.html">Clinic Profile
+                        </a>
+                    </li>
+
+                    <li class="nav-item authed">
+                        <a class="nav-link active" href="./appointments-current-hour.html">Active Appointements
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item authed doc-auth">
+                        <a class="nav-link active" href="./manage-emps.html">Manage Emps
+                        </a>
+                    </li>
+                    <li class="nav-item authed doc-auth">
+                        <a class="nav-link active" href="./manage-patients.html">Manage Patients
+                        </a>
+                    </li>
+                    <li class="nav-item authed doc-auth">
+                        <a class="nav-link active" href="./manageSessions.html">Manage Sessions
+                        </a>
+                    </li>
+                    <li class="nav-item authed">
+                        <a class="nav-link active" style="font-weight: bolder;" href="./patients.html">Patients
+                        </a>
+                    </li>
+                    <li class="nav-item authed">
+                        <a class="nav-link active" href="./create-patient-account.html" target="_blank">Create Patient
+                            Account
+                        </a>
+                    </li>
+                    <li class="nav-item active-ses">
+                        <a class="nav-link active" href="./current-session.html">
+                            Current Session
+                        </a>
+                    </li>
+
+                    <li class="nav-item authed">
+                        <a class="nav-link active" href="#" id='logout'>
+                            Logout
+                        </a>
+                    </li>
+
+                </ul>
+                <script>
+                    if (!localStorage.getItem('se')) {
+                        document.querySelector('.active-ses').style.display = 'none'
+                    }
+                    document.getElementById('logout').onclick = () => {
+                        document.cookie = "admin=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                        document.cookie = "doc=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                        window.open('/admin/expert-login.html', '_self')
+                    }
+                </script>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="text-center mt-5">Patients</h1>
+        <div class="mx-auto w-50">
+            <div class="form-group">
+                <label class="form-label mt-4">Phone</label>
+                <input class="form-control" id='input' />
+            </div>
+            <button id='search' class="btn btn-primary mt-3 d-block mx-auto">Search</button>
+
+        </div>
+        <div class="table-responsive mt-5">
+            <table class="table table-hover bg-primary text-white text-center mt-3" style="min-width: 1000px;">
+
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Phone</th>
+                        <th> Actions </th>
+                    </tr>
+                </thead>
+                <tbody style="border: none;" id='tbody'>
+
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+<script src="./scripts/patients.js" type='module'></script>
+
+</html>

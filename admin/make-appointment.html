@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/bootstrap.css">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">X-Ray Clinic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+
+                    <li class="nav-item not-authed">
+                        <a class="nav-link active" href="./doctor-login.html">Doctor Login
+                        </a>
+                    </li>
+                    <li class="nav-item not-authed">
+                        <a class="nav-link active" href="./expert-login.html">Expert Login
+                        </a>
+                    </li>
+
+                    <li class="nav-item not-authed">
+                        <a class="nav-link active" href="./doctor-signup.html">Doctor Signup
+                        </a>
+                    </li>
+                    <li class="nav-item not-authed">
+                        <a class="nav-link active" href="./expert-signup.html">Expert Signup
+                        </a>
+                    </li>
+                    <li class="nav-item authed">
+                        <a class="nav-link active" href="./ai-model-form.html">AI
+                        </a>
+                    </li>
+
+                    <li class="nav-item authed">
+                        <a class="nav-link active" href="./create-report.html">Create Report
+                        </a>
+                    </li>
+                    <li class="nav-item authed">
+                        <a class="nav-link active" href="./manage-emps.html">Manage Emps
+                        </a>
+                    </li>
+                    <li class="nav-item authed">
+                        <a class="nav-link active" href="./manage-patients.html">Manage Patients
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="text-center">Make An Appointment</h1>
+        <div class="container">
+            <form class="mx-auto w-75" id='book-form'>
+                <div class="form-group">
+                    <label class="form-label mt-4">Date</label>
+                    <input class="form-control" type="date" id='date' required />
+                </div>
+                <div class="form-group">
+                    <label class="form-label mt-4">Time</label>
+                    <input class="form-control" type="time" id='time' required />
+                </div>
+                <button type="submit" id='bt' class="btn btn-primary mt-3 d-block mx-auto w-50">Book</button>
+
+            </form>
+        </div>
+
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+<script src="./scripts/patient-appointment.js"></script>
+
+</html>

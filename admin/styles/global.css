@@ -1,0 +1,9 @@
+body{
+    font-family: 'Tajawal', sans-serif;
+}
+
+#timer{
+	font-size:100px;
+	color:#2C3E50;
+	margin-left:80px;
+}

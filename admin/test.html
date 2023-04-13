@@ -1,0 +1,47 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+</head>
+
+<body>
+    <div class="mx-auto w-50">
+        <div class="form-group">
+            <label class="form-label mt-4">Phone</label>
+            <input class="form-control" id='input' />
+        </div>
+        <button id='search' class="btn btn-primary mt-3 d-block mx-auto">Search</button>
+
+    </div>
+
+</body>
+<script>
+        import { URL } from "../mainURLscript.js"
+    const getPatientByPhone = async (phone) => {
+        try {
+            const url = URL + `/PatientAPI.asmx/selectByPhone?`
+            const res = await fetch(url + new URLSearchParams({
+                "phone": phone
+            }))
+
+            const data = await res.json()
+
+            if (!res.ok) {
+                const message = data.Message;
+                throw new Error(message);
+            }
+
+            console.log('data', data)
+            return data
+        } catch (error) {
+            alert(error)
+        }
+    }
+    document.getElementById('search').addEventListener('click', async () => {
+        const data = await getPatientByPhone(document.getElementById('input').value.toString())
+        documnet.write(data)
+    })
+</script>
+
+</html> -->
